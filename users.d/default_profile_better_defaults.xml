@@ -1,0 +1,16 @@
+<clickhouse>
+  <profiles>
+    <default>
+      <cancel_http_readonly_queries_on_client_close>1</cancel_http_readonly_queries_on_client_close>
+
+      <!-- less babysitting needed -->
+      <insert_distributed_sync>1</insert_distributed_sync>
+
+      <!-- if you have more than 16 cores, and concurrent load, the more concurrent the load is the less concurreny in the scope of singe query should be used -->
+      <!-- <max_threads>16</max_threads> -->
+
+      <!-- for fast disks and high concurrency (sympthoms: high AsynchronousReadWaitMicroseconds with low IOWait) -->
+      <!-- <local_filesystem_read_methos>pread</local_filesystem_read_methos> -->
+    </default>
+  </profiles>
+</clickhouse>
