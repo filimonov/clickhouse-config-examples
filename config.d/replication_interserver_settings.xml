@@ -1,0 +1,9 @@
+<clickhouse>
+  <!-- by default clickhouse uses FQDN for that -->
+  <interserver_http_host>custom_host</interserver_http_host>
+
+  <interserver_http_credentials>
+        <user>interserver</user>
+        <password>random$$paSSword123</password>
+  </interserver_http_credentials>
+<clickhouse>
