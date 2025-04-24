@@ -1,0 +1,40 @@
+<clickhouse>
+    <profiles>
+        <dba></dba> <!-- just derive everything from the default, i.e. no limitations -->
+    </profiles>
+
+    <!-- Users and ACL. -->
+    <users>
+        <!-- If user name was not specified, 'default' user is used. -->
+        <dba>
+            <--
+                 Example: <password_sha256_hex>65e84be33532fb784c48129675f9eff3a682b27168c0ea744b2cf58ee02337c5</password_sha256_hex>
+                 Execute: PASSWORD=$(base64 < /dev/urandom | head -c8); echo "$PASSWORD"; echo -n "$PASSWORD" | sha256sum | tr -d '-'
+            -->
+            <password_sha256_hex>....</password_sha256_hex>
+
+            <!-- dba should connect from the clichouse host -->
+            <networks>
+                <ip>::1</ip>
+                <ip>127.0.0.1</ip>
+            </networks>
+
+            <!-- Settings profile for user. -->
+            <profile>default</profile>
+
+            <!-- Quota for user. -->
+            <quota>default</quota>
+
+            <!-- User can create other users and grant rights to them. -->
+            <access_management>1</access_management>
+
+            <!-- User can manipulate named collections. -->
+            <named_collection_control>1</named_collection_control>
+
+            <!-- User permissions can be granted here -->
+            <grants>
+                <query>GRANT ALL ON *.*</query>
+            </grants>
+       </dba>
+    </users>
+</clickhouse>
