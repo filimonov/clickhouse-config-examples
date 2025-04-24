@@ -1,5 +1,7 @@
+<?xml version="1.0"?>
 <clickhouse>
-<users>
-  <default remove="1" />
-</users>
+    <!-- Remove readonly user (defined in users.xml), we allow only access by password -->
+    <users>
+        <readonly remove="remove" />
+    </users>
 </clickhouse>
