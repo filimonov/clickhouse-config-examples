@@ -1,0 +1,6 @@
+<clickhouse>
+    <logger>
+        <log>/opt/chdata/clickhouse/log/clickhouse-server.log</log>
+        <errorlog>/opt/chdata/clickhouse/log/clickhouse-server.err.log</errorlog>
+    </logger>
+</clickhouse>
