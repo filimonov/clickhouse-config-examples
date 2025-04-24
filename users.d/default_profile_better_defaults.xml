@@ -3,7 +3,7 @@
     <default>
       <cancel_http_readonly_queries_on_client_close>1</cancel_http_readonly_queries_on_client_close>
 
-      <!-- less babysitting needed -->
+      <!-- less surprises -->
       <insert_distributed_sync>1</insert_distributed_sync>
 
       <max_memory_usage>10000000000</max_memory_usage>
