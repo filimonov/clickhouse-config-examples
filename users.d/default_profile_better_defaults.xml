@@ -13,12 +13,20 @@
       <max_bytes_before_external_group_by>7500000000</max_bytes_before_external_group_by>
       <max_bytes_before_external_sort>7500000000</max_bytes_before_external_sort>
 
-      <max_concurrent_queries_for_user>900</max_concurrent_queries_for_user>
+      <max_concurrent_queries_for_user>850</max_concurrent_queries_for_user>
       <max_concurrent_queries_for_all_users>950</max_concurrent_queries_for_all_users>
 
       <!-- improve performance when applicable -->   
       <parallel_view_processing>1</parallel_view_processing>
       <do_not_merge_across_partitions_select_final>1</do_not_merge_across_partitions_select_final>
+
+      <!-- durability
+      <insert_quorum>auto</insert_quorum>
+      -->
+
+      <!-- frequent inserts:
+      <async_inserts>1</async_inserts>
+      -->
 
       <!-- bit slower but uses less ram -->
 <!--       <distributed_aggregation_memory_efficient>1</distributed_aggregation_memory_efficient> -->
