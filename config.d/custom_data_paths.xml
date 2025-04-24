@@ -1,4 +1,5 @@
 <clickhouse>
+    <!-- alternative it just creating a symlink  in /var/lib/clickhouse pointing to the needed path -->
     <path>/opt/chdata/clickhouse/</path>
     <tmp_path>/opt/chdata/clickhouse/tmp/</tmp_path>
     <user_files_path>/opt/chdata/clickhouse/user_files/</user_files_path>
