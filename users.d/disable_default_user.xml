@@ -1,0 +1,5 @@
+<clickhouse>
+<users>
+  <default remove="1">
+</users>
+</clickhouse>
