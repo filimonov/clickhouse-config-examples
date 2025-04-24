@@ -1,0 +1,28 @@
+<!-- 
+    clickhouse can loose some data in case of hard restart. Those setting may reduce the risks of that 
+    but at quite high cost, so use them only if you fully understand the negative impact and really need that.
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<clickhouse>
+    <!-- also see (enabled by default)
+    <profiles>
+        <default>
+            <fsync_metadata>1</fsync_metadata>
+        </default>
+    <profiles>
+    --> 
+
+    <distributed>
+        <fsync_after_insert>1</fsync_after_insert>
+        <fsync_directories>1</fsync_directories>
+    </distributed>
+
+    <merge_tree_settings>
+        <min_rows_to_fsync_after_merge>100000</min_rows_to_fsync_after_merge>
+        <min_compressed_bytes_to_fsync_after_merge>100000000</min_compressed_bytes_to_fsync_after_merge>
+        <min_compressed_bytes_to_fsync_after_fetch>100000000</min_compressed_bytes_to_fsync_after_fetch>
+        <fsync_after_insert>1</fsync_after_insert>
+        <fsync_part_directory>1</fsync_part_directory>
+    </merge_tree_settings>
+</clickhouse>
