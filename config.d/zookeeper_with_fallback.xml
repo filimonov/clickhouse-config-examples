@@ -17,5 +17,9 @@
             <host>remote-zk-3</host>
             <port>9181</port>
         </node>
+        <!-- 
+        <session_timeout_ms>30000</session_timeout_ms>
+        <operation_timeout_ms>10000</operation_timeout_ms>
+        -->
     </zookeeper>
 </clickhouse>
