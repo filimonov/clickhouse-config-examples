@@ -19,7 +19,18 @@
       <!-- if clickhouse is not able to clean the parts fast enough, better to throttle the inserts, giving the clickhouse and filesystem some time to clean the parts --> 
       <inactive_parts_to_delay_insert>10000</inactive_parts_to_delay_insert>
       <inactive_parts_to_throw_insert>20000</inactive_parts_to_throw_insert>
+
+      <!-- work great if you follow best practice: table TTL rules are using same columns as table partition key -->
+      <ttl_only_drop_parts>1</ttl_only_drop_parts>
   </merge_tree>
 
 
+  <max_table_num_to_throw>1000</max_table_num_to_throw>
+  <max_database_num_to_throw>100</max_database_num_to_throw>
+
+  <background_fetches_pool_size>32</background_fetches_pool_size>
+
+  <!-- ensire that you reserve enough for system needs -->
+  <!-- <max_server_memory_usage_to_ram_ratio>0.85<max_server_memory_usage_to_ram_ratio> -->
+  
 </clickhouse>
