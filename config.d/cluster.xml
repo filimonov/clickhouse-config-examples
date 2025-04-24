@@ -1,0 +1,29 @@
+<clickhouse>
+    <remote_servers>
+        <prod_cluster> <!-- you need to give a some name for a cluster -->
+            <secret>!!!GENERATE A RANDOM UNIQUE STRING AND PUT HERE (should be the same on all cluster nodes)!!</secret>
+            <shard>
+                <internal_replication>true</internal_replication>
+                <replica>
+                    <host>clickhouse-sh1r1</host>
+                    <port>9000</port>
+                </replica>
+                <replica>
+                    <host>clickhouse-sh1r2</host>
+                    <port>9000</port>
+                </replica>
+            </shard>
+            <shard>
+                <internal_replication>true</internal_replication>
+                <replica>
+                    <host>clickhouse-sh2r1</host>
+                    <port>9000</port>
+                </replica>
+                <replica>
+                    <host>clickhouse-sh2r2</host>
+                    <port>9000</port>
+                </replica>
+            </shard>
+        </prod_cluster>
+    </remote_servers>
+</clickhouse>
