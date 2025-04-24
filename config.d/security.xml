@@ -1,0 +1,10 @@
+<clickhouse>
+     <!-- forbid unsafe password --> 
+    <allow_plaintext_password>0</allow_plaintext_password>
+    <allow_no_password>0</allow_no_password>
+    <allow_implicit_no_password>0</allow_implicit_no_password>
+
+    <!-- forbid quering external resources with url / s3 / mysql etc function unless it's explicitly allowed / listed -->
+    <remote_url_allow_hosts>
+    </remote_url_allow_hosts>  
+</clickhouse>
