@@ -1,10 +1,26 @@
 <!-- 25.5 -->
 <clickhouse>
+
     <query_log>
         <partition_by>toYYYYMM(event_date)</partition_by>
         <ttl>toStartOfMonth(event_date) + INTERVAL 3 MONTH</ttl>
     </query_log>
 
+    <!-- or replace the whole blocks 
+    <query_log replace="1">
+        <database>system</database>
+        <table>query_log</table>
+        <flush_interval_milliseconds>7500</flush_interval_milliseconds>
+        <engine>
+            ENGINE = MergeTree
+            PARTITION BY event_date
+            ORDER BY (event_time)
+            TTL event_date + interval 90 day
+            SETTINGS ttl_only_drop_parts=1
+        </engine>
+    </query_log>
+    -->
+    
     <trace_log>
         <partition_by>toYYYYMM(event_date)</partition_by>
         <ttl>toStartOfMonth(event_date) + INTERVAL 3 MONTH</ttl>
@@ -14,6 +30,10 @@
         <partition_by>event_date</partition_by>
         <ttl>toStartOfMonth(event_date) + INTERVAL 3 DAY</ttl>
     </query_thread_log>
+
+    <!-- or just remove:
+    <query_thread_log remove="1" />      
+    -->
 
     <query_views_log>
         <partition_by>toYYYYMM(event_date)</partition_by>
