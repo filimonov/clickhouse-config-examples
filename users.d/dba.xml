@@ -7,7 +7,7 @@
     <users>
         <!-- If user name was not specified, 'default' user is used. -->
         <dba>
-            <--
+            <!--
                  Example: <password_sha256_hex>65e84be33532fb784c48129675f9eff3a682b27168c0ea744b2cf58ee02337c5</password_sha256_hex>
                  Execute: PASSWORD=$(base64 < /dev/urandom | head -c8); echo "$PASSWORD"; echo -n "$PASSWORD" | sha256sum | tr -d '-'
             -->
