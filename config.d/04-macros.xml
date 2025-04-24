@@ -1,0 +1,11 @@
+<clickhouse>
+    <!--
+        That macros are defined per server,
+        and they can be used in DDL, to make the DB schema cluster/server neutral
+    -->
+    <macros>
+        <cluster>prod_cluster</cluster>
+        <shard>01</shard>
+        <replica>clickhouse-sh1r1</replica> <!-- better - use the same as hostname  -->
+    </macros>
+</clickhouse>
