@@ -1,0 +1,11 @@
+<clickhouse>
+  <!-- remove the default listeing for the localhost / loopback, it will activated by 'listen all interfaces' rule below anyway -->
+  <listen_host remote="1" />
+
+  <!-- to listen all interfaces -->
+  <listen_host>::</listen_host>
+  
+  <!-- if ipv6 is disabled:
+  <listen_host>0.0.0.0</listen_host>
+  -->
+<clickhouse>
