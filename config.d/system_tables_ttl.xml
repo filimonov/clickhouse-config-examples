@@ -1,0 +1,102 @@
+<!-- 25.5 -->
+<clickhouse>
+    <query_log>
+        <partition_by>toYYYYMM(event_date)</partition_by>
+        <ttl>toStartOfMonth(event_date) + INTERVAL 3 MONTH</ttl>
+    </query_log>
+
+    <trace_log>
+        <partition_by>toYYYYMM(event_date)</partition_by>
+        <ttl>toStartOfMonth(event_date) + INTERVAL 3 MONTH</ttl>
+    </trace_log>
+
+    <query_thread_log>
+        <partition_by>event_date</partition_by>
+        <ttl>toStartOfMonth(event_date) + INTERVAL 3 DAY</ttl>
+    </query_thread_log>
+
+    <query_views_log>
+        <partition_by>toYYYYMM(event_date)</partition_by>
+        <ttl>toStartOfMonth(event_date) + INTERVAL 3 MONTH</ttl>
+    </query_views_log>
+
+    <part_log>
+        <partition_by>toYYYYMM(event_date)</partition_by>
+        <ttl>toStartOfMonth(event_date) + INTERVAL 3 MONTH</ttl>
+    </part_log>
+
+    <text_log>
+        <partition_by>toYYYYMM(event_date)</partition_by>
+        <ttl>toStartOfMonth(event_date) + INTERVAL 3 MONTH</ttl>
+    </text_log>
+
+    <metric_log>
+        <partition_by>toYYYYMM(event_date)</partition_by>
+        <ttl>toStartOfMonth(event_date) + INTERVAL 6 MONTH</ttl>
+    </metric_log>
+
+    <latency_log>
+        <partition_by>event_date</partition_by>
+        <ttl>event_date + INTERVAL 7 DAY</ttl>
+    </latency_log>
+
+    <error_log>
+        <partition_by>toYYYYMM(event_date)</partition_by>
+        <ttl>toStartOfMonth(event_date) + INTERVAL 3 MONTH</ttl>
+    </error_log>
+
+    <query_metric_log>
+        <partition_by>event_date</partition_by>
+        <ttl>event_date + INTERVAL 7 DAY</ttl>
+    </query_metric_log>
+
+    <asynchronous_metric_log>
+        <partition_by>toYYYYMM(event_date)</partition_by>
+        <ttl>toStartOfMonth(event_date) + INTERVAL 6 MONTH</ttl>
+    </asynchronous_metric_log>
+
+    <opentelemetry_span_log>
+        <engine>
+            engine MergeTree
+            partition by finish_date
+            order by (finish_time_us)
+            TTL finish_date + INTERVAL 3 DAY
+        </engine>
+    </opentelemetry_span_log>
+
+    <crash_log>
+        <partition_by>toYYYYMM(event_date)</partition_by>
+        <ttl>toStartOfMonth(event_date) + INTERVAL 6 MONTH</ttl>
+    </crash_log>
+
+    <!-- <session_log>
+        <partition_by>toYYYYMM(event_date)</partition_by>
+        <ttl>toStartOfMonth(event_date) + INTERVAL 90 DAY</ttl>
+    </session_log> -->
+
+    <processors_profile_log>
+        <partition_by>event_date</partition_by>
+        <ttl>event_date + INTERVAL 7 DAY</ttl>
+    </processors_profile_log>
+
+    <asynchronous_insert_log>
+        <partition_by>event_date</partition_by>
+        <ttl>event_date + INTERVAL 3 DAY</ttl>
+    </asynchronous_insert_log>
+
+    <backup_log>
+        <partition_by>event_date</partition_by>
+        <ttl>event_date + INTERVAL 7 DAY</ttl>
+    </backup_log>
+
+    <s3queue_log>
+        <partition_by>event_date</partition_by>
+        <ttl>event_date + INTERVAL 7 DAY</ttl>
+    </s3queue_log>
+
+    <blob_storage_log>
+        <partition_by>event_date</partition_by>
+        <ttl>event_date + INTERVAL 7 DAY</ttl>
+    </blob_storage_log>
+
+<clickhouse>
