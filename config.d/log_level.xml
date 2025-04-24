@@ -1,0 +1,6 @@
+<clickhouse>
+    <logger>
+        <!-- for high QPS the default trace is too verbose -->
+        <level>information</level>
+    </logger>
+</clickhouse>
