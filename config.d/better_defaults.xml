@@ -7,4 +7,19 @@
   <max_concurrent_select_queries>250</max_concurrent_select_queries>
   <max_concurrent_insert_queries>700</max_concurrent_insert_queries>
 
+  <merge_tree>
+      <materialize_ttl_recalculate_only>1</materialize_ttl_recalculate_only>
+      <wait_for_unique_parts_send_before_shutdown_ms>30000</wait_for_unique_parts_send_before_shutdown_ms>
+
+      <!-- starting too many mutations simultaniously can be problematic -->
+      <number_of_mutations_to_delay>1</number_of_mutations_to_delay>
+      <number_of_mutations_to_throw>5</number_of_mutations_to_throw>
+      <max_suspicious_broken_parts>5</max_suspicious_broken_parts>
+
+      <!-- if clickhouse is not able to clean the parts fast enough, better to throttle the inserts, giving the clickhouse and filesystem some time to clean the parts --> 
+      <inactive_parts_to_delay_insert>10000</inactive_parts_to_delay_insert>
+      <inactive_parts_to_throw_insert>20000</inactive_parts_to_throw_insert>
+  </merge_tree>
+
+
 </clickhouse>
