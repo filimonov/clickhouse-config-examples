@@ -8,4 +8,8 @@
   <!-- if ipv6 is disabled:
   <listen_host>0.0.0.0</listen_host>
   -->
+
+  <!-- ignore errors if can't bind to some interfaces -->
+  <listen_try>1</listen_try>
+
 <clickhouse>
