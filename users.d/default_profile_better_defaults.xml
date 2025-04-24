@@ -6,6 +6,11 @@
       <!-- less babysitting needed -->
       <insert_distributed_sync>1</insert_distributed_sync>
 
+      <max_memory_usage>10000000000</max_memory_usage>
+      <max_bytes_before_external_group_by>7500000000</max_bytes_before_external_group_by>
+      <max_bytes_before_external_sort>7500000000</max_bytes_before_external_sort>
+
+
       <!-- if you have more than 16 cores, and concurrent load, the more concurrent the load is the less concurreny in the scope of singe query should be used -->
       <!-- <max_threads>16</max_threads> -->
 
