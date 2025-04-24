@@ -1,0 +1,21 @@
+<clickhouse>
+    <zookeeper>
+        <zookeeper_load_balancing>first_or_random</zookeeper_load_balancing>
+        <fallback_session_lifetime>
+            <min>120</min>
+            <max>300</max>
+        </fallback_session_lifetime>
+        <node index="1">
+            <host>dc-local-zk-1</host>
+            <port>9181</port>
+        </node>
+        <node index="2">
+            <host>remote-zk-2</host>
+            <port>9181</port>
+        </node>
+        <node index="3">
+            <host>remote-zk-3</host>
+            <port>9181</port>
+        </node>
+    </zookeeper>
+</clickhouse>
