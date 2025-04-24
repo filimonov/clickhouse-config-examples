@@ -1,0 +1,12 @@
+<clickhouse>
+    <path>/opt/chdata/clickhouse/</path>
+    <tmp_path>/opt/chdata/clickhouse/tmp/</tmp_path>
+    <user_files_path>/opt/chdata/clickhouse/user_files/</user_files_path>
+    <format_schema_path>/opt/chdata/clickhouse/format_schemas/</format_schema_path>
+    <user_directories>
+        <local_directory>
+            <!-- Path to folder where users created by SQL commands are stored. -->
+            <path>/opt/chdata/clickhouse/access/</path>
+        </local_directory>
+    </user_directories>
+</clickhouse>
