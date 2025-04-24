@@ -3,6 +3,7 @@
     <tmp_path>/opt/chdata/clickhouse/tmp/</tmp_path>
     <user_files_path>/opt/chdata/clickhouse/user_files/</user_files_path>
     <format_schema_path>/opt/chdata/clickhouse/format_schemas/</format_schema_path>
+    <custom_cached_disks_base_directory>/opt/chdata/clickhouse/caches/</custom_cached_disks_base_directory>
     <user_directories>
         <local_directory>
             <!-- Path to folder where users created by SQL commands are stored. -->
