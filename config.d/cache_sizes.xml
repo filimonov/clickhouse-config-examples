@@ -1,0 +1,8 @@
+<clickhouse>
+  <!-- lower if you have small ram node, increase if you have a lot of misses  -->
+  <mark_cache_size>5368709120</mark_cache_size> 
+  <index_mark_cache_size>5368709120</index_mark_cache_size> 
+  
+  <!-- rarely useful, should be enables in settings -->
+  <uncompressed_cache_size>8589934592</uncompressed_cache_size>
+</clickhouse>
