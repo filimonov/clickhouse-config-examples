@@ -9,7 +9,7 @@
       <use_hedged_requests>0</use_hedged_requests>
 
       <!-- less surprises -->
-      <insert_distributed_sync>1</insert_distributed_sync>
+      <insert_distributed_sync>1</insert_distributed_sync> <!-- aka: distributed_foreground_insert -->
 
       <max_memory_usage>10000000000</max_memory_usage>
       <max_bytes_before_external_group_by>7500000000</max_bytes_before_external_group_by>
