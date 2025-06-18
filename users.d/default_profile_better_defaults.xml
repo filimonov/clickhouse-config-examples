@@ -37,7 +37,7 @@
       <!-- <max_threads>16</max_threads> -->
 
       <!-- for fast disks and high concurrency (sympthoms: high AsynchronousReadWaitMicroseconds with low IOWait) -->
-      <!-- <local_filesystem_read_methos>pread</local_filesystem_read_methos> -->
+      <!-- <local_filesystem_read_method>pread</local_filesystem_read_method> -->
 
       <!-- connectivity to other nodes -->
 <!--       <load_balancing>nearest_hostname</load_balancing>
