@@ -1,0 +1,132 @@
+<clickhouse>
+  <profiles>
+    <strict_profile>
+      <!-- Logging settings -->
+      <log_profile_events>1</log_profile_events>
+      <log_queries>1</log_queries>
+      <log_queries_cut_to_length>100000</log_queries_cut_to_length>
+      <log_queries_min_query_duration_ms>0</log_queries_min_query_duration_ms>
+      <log_queries_min_type>QUERY_START</log_queries_min_type>
+      <log_query_settings>1</log_query_settings>
+      <log_query_threads>1</log_query_threads>
+
+      <!-- User limitations -->
+      <priority>0</priority>
+      <os_thread_priority>0</os_thread_priority>
+      <max_concurrent_queries_for_user>10</max_concurrent_queries_for_user>
+      <max_memory_usage>10000000000</max_memory_usage>
+      <max_memory_usage_for_user>10000000000</max_memory_usage_for_user>
+      <max_bytes_before_external_group_by>0</max_bytes_before_external_group_by>
+      <max_bytes_before_external_sort>0</max_bytes_before_external_sort>
+      <max_bytes_before_remerge_sort>0</max_bytes_before_remerge_sort>
+      <max_threads>4</max_threads>
+      <max_execution_time>600</max_execution_time>
+      <max_network_bandwidth>25000000</max_network_bandwidth>
+      <max_bytes_to_read>1000000000000</max_bytes_to_read>
+      <max_rows_to_read>10000000000</max_rows_to_read>
+
+      <!-- Block sizes -->
+      <max_block_size>65505</max_block_size>
+      <max_compress_block_size>1048576</max_compress_block_size>
+      <min_compress_block_size>65536</min_compress_block_size>
+      <min_insert_block_size_bytes>268427520</min_insert_block_size_bytes>
+      <min_insert_block_size_bytes_for_materialized_views>0</min_insert_block_size_bytes_for_materialized_views>
+      <min_insert_block_size_rows>1048545</min_insert_block_size_rows>
+      <min_insert_block_size_rows_for_materialized_views>0</min_insert_block_size_rows_for_materialized_views>
+
+      <constraints>
+        <!-- Logging readonly -->
+        <log_profile_events><readonly/></log_profile_events>
+        <log_queries><readonly/></log_queries>
+        <log_queries_cut_to_length><readonly/></log_queries_cut_to_length>
+        <log_queries_min_query_duration_ms><readonly/></log_queries_min_query_duration_ms>
+        <log_queries_min_type><readonly/></log_queries_min_type>
+        <log_query_settings><readonly/></log_query_settings>
+        <log_query_threads><readonly/></log_query_threads>
+
+        <!-- Limitations readonly -->
+        <priority><readonly/></priority>
+        <os_thread_priority><readonly/></os_thread_priority>
+        <max_concurrent_queries_for_user><readonly/></max_concurrent_queries_for_user>
+
+        <!-- Memory constraints -->
+        <max_memory_usage>
+          <min>1</min>
+          <max>10000000000</max>
+        </max_memory_usage>
+        <max_memory_usage_for_user>
+          <min>1</min>
+          <max>10000000000</max>
+        </max_memory_usage_for_user>
+
+        <!-- External processing -->
+        <max_bytes_before_external_group_by>
+          <min>0</min>
+          <max>4294967296</max>
+        </max_bytes_before_external_group_by>
+        <max_bytes_before_external_sort>
+          <min>0</min>
+          <max>4294967296</max>
+        </max_bytes_before_external_sort>
+        <max_bytes_before_remerge_sort>
+          <min>0</min>
+          <max>4294967296</max>
+        </max_bytes_before_remerge_sort>
+
+        <!-- Execution -->
+        <max_threads>
+          <min>1</min>
+          <max>16</max>
+        </max_threads>
+        <max_execution_time>
+          <min>1</min>
+          <max>1200</max>
+        </max_execution_time>
+        <max_network_bandwidth>
+          <min>1</min>
+          <max>50000000</max>
+        </max_network_bandwidth>
+
+        <!-- Read limits -->
+        <max_bytes_to_read>
+          <min>1</min>
+          <max>1000000000000</max>
+        </max_bytes_to_read>
+        <max_rows_to_read>
+          <min>1</min>
+          <max>10000000000</max>
+        </max_rows_to_read>
+
+        <!-- Block size constraints -->
+        <max_block_size>
+          <min>1024</min>
+          <max>262144</max>
+        </max_block_size>
+        <max_compress_block_size>
+          <min>1024</min>
+          <max>4194304</max>
+        </max_compress_block_size>
+        <min_compress_block_size>
+          <min>1024</min>
+          <max>262144</max>
+        </min_compress_block_size>
+        <min_insert_block_size_bytes>
+          <min>0</min>
+          <max>1073741824</max>
+        </min_insert_block_size_bytes>
+        <min_insert_block_size_bytes_for_materialized_views>
+          <min>0</min>
+          <max>1073741824</max>
+        </min_insert_block_size_bytes_for_materialized_views>
+        <min_insert_block_size_rows>
+          <min>0</min>
+          <max>10485760</max>
+        </min_insert_block_size_rows>
+        <min_insert_block_size_rows_for_materialized_views>
+          <min>0</min>
+          <max>10485760</max>
+        </min_insert_block_size_rows_for_materialized_views>
+      </constraints>
+    </strict_profile>
+  </profiles>
+</clickhouse>
