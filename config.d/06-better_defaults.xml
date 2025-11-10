@@ -27,8 +27,11 @@
 
       <!-- work great if you follow best practice: table TTL rules are using same columns as table partition key -->
       <ttl_only_drop_parts>1</ttl_only_drop_parts>
-  </merge_tree>
 
+      <!-- see https://kb.altinity.com/altinity-kb-setup-and-maintenance/metric_log_ram/ -->
+      <min_bytes_for_wide_part>134217728</min_bytes_for_wide_part>
+      <vertical_merge_algorithm_min_bytes_to_activate>134217728</vertical_merge_algorithm_min_bytes_to_activate>  
+    </merge_tree>
 
   <max_table_num_to_throw>1000</max_table_num_to_throw>
   <max_database_num_to_throw>100</max_database_num_to_throw>
