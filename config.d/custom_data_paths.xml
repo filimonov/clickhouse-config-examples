@@ -1,7 +1,7 @@
 <clickhouse>
     <!-- alternative it just creating a symlink  in /var/lib/clickhouse pointing to the needed path -->
     <path>/opt/chdata/clickhouse/</path>
-    <tmp_path>/opt/chdata/clickhouse/tmp/</tmp_path>
+    <tmp_path>/opt/chdata/clickhouse/tmp/</tmp_path> <!-- don't put on slow / remote disk -->
     <user_files_path>/opt/chdata/clickhouse/user_files/</user_files_path>
     <format_schema_path>/opt/chdata/clickhouse/format_schemas/</format_schema_path>
     <custom_cached_disks_base_directory>/opt/chdata/clickhouse/caches/</custom_cached_disks_base_directory>
