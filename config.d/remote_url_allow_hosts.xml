@@ -1,0 +1,10 @@
+<clickhouse> 
+    <remote_url_allow_hosts>
+        <host>host:80</host>
+        <host>localhost:9440</host>
+        <host>[2a02:6b8:a::a]</host>
+        <host>example01-01-1</host>
+        <host_regexp>^[a-z]*\.com$</host_regexp>
+        <host_regexp>^.*\.myhost\.com$</host_regexp>
+    </remote_url_allow_hosts>
+</clickhouse>
