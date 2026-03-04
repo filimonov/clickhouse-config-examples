@@ -1,0 +1,8 @@
+<clickhouse>
+  <user_directories>
+      <replicated>
+          <zookeeper_path>/clickhouse/access</zookeeper_path>
+          <allow_backup>true</allow_backup>
+      </replicated>
+  </user_directories>
+</clickhouse>
