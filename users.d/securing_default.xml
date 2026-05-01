@@ -1,0 +1,11 @@
+<clickhouse>
+  <profiles>                                                                                                                                                                                                                                                                                                                                                                            
+    <default>                                            
+      <constraints>                                                                                                                                                                                                                                                                                                                                                                     
+        <allow_unrestricted_reads_from_keeper>
+          <readonly/>                                                                                                                                                                                                                                                                                                                                                                   
+        </allow_unrestricted_reads_from_keeper>          
+      </constraints>                                                                                                                                                                                                                                                                                                                                                                    
+    </default>
+  </profiles> 
+</clickhouse>
